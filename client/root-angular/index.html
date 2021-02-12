@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RootAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- <meta name="importmap-type" content="systemjs-importmap">
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "micro-angular": "http://localhost:4300/main.js",
+        "micro-dashboard": "http://localhost:4202/main.js",
+        "micro-footer": "http://localhost:4203/main.js",
+        "single-spa": "https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.5/system/single-spa.min.js"
+      }
+    }
+  </script>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/single-spa/4.3.5/system/single-spa.min.js" as="script" crossorigin="anonymous" /> -->
+  <script src="https://unpkg.com/core-js-bundle@3.1.4/minified.js"></script>
+  <script src="https://unpkg.com/zone.js"></script>
+  <script src="https://unpkg.com/import-map-overrides@1.6.0/dist/import-map-overrides.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/system.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/amd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-exports.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/4.0.0/extras/named-register.min.js"></script>
+<link rel="stylesheet" href="styles.css"></head>
+<body>
+  <app-root-config></app-root-config>
+  <!-- <script>
+    System.import('single-spa').then(function (singleSpa) {
+      singleSpa.registerApplication(
+        'micro-angular',
+        function () {
+          return System.import('micro-angular');
+        },
+        function (location) {
+          return location.pathname.startsWith('/pages');
+          //return true;
+        }
+      )
+
+      singleSpa.registerApplication(
+          'micro-dashboard',
+          function () {
+            return System.import('micro-dashboard');
+          },
+          function (location) {
+            return location.pathname.startsWith('/dash');
+            //return true;
+          }
+        )
+
+      singleSpa.registerApplication(
+        'micro-footer',
+        function () {
+          return System.import('micro-footer');
+        },
+        function (location) {
+          // return location.pathname.startsWith('/app1');
+          return true;
+        }
+      );
+      
+      singleSpa.start();
+    })
+  </script> -->
+<script src="runtime.js" defer></script><script src="polyfills.js" defer></script><script src="vendor.js" defer></script><script src="main.js" defer></script></body>
+</html>
